@@ -1,5 +1,6 @@
 package application;
 
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -16,6 +17,7 @@ import entitites.Sale;
 public class program {
 
 	public static void main(String[] args) {
+		
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
@@ -45,10 +47,9 @@ public class program {
 			System.out.println("Total de vendas por vendedor:");
 			System.out.println();
 			
-			//list.forEach(System.out :: println);
+			
 			System.out.println("==============================================");
-			
-			
+						
 
 			Map<String, Double> sellers = new HashMap();
 			
@@ -59,16 +60,10 @@ public class program {
 		     				  Collectors.summingDouble(Sale :: getTotal)
 		     				  )
 		     				  );
+		     
 		     sellers.forEach((k, v) -> System.out.printf("%s: R$ %s\n", k, v));
 		    		 
-		    		 
-		    		 //.filter(p -> p.getSeller().equalsIgnoreCase(p.getSeller()))
-					  //.map(p -> p.getTotal())
-					  //.reduce(0.0, (x, y) -> x + y);
-		     
-		    
-					
-		     //sellers.forEach(System.out :: println);
+		    	
 			}
 			catch (IOException e) {
 				System.out.println("Error: " + e.getMessage());
